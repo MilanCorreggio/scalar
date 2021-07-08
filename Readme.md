@@ -1,14 +1,14 @@
-#Register and delete traveling flights
+#Sclardb travel
+
+Delete and add objects in the database using Emoney model from getting started.
 
 Start the project running
 `./gradlew installDist`
 
-Install scalar-schema-standalone-3.0.0.jar [here](https://github.com/scalar-labs/scalardb/releases)
-
-Start docker container using 
+Start docker container using
 `docker compose up -d`
 
-Install the table using 
+Install the table using
 `java -jar scalar-schema-standalone-3.0.0.jar --jdbc -j jdbc:mysql://localhost:3306/ -u root -p password -f travel-transaction.json`
 
 
