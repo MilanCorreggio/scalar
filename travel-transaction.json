@@ -1,0 +1,15 @@
+{
+  "travel.japan": {
+    "transaction": true,
+    "partition-key": [
+      "id"
+    ],
+    "clustering-key": [],
+    "columns": {
+      "id": "INT",
+      "price": "INT",
+      "to": "TEXT",
+      "from": "TEXT"
+    }
+  }
+}

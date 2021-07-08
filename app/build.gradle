@@ -1,0 +1,14 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+mainClassName = "project.TravelMain"
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation group: 'com.scalar-labs', name: 'scalardb', version: '3.0.0'
+    implementation group: 'com.google.inject', name: 'guice', version: '5.0.1'
+}
