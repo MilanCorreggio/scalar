@@ -1,5 +1,8 @@
 package project;
 
+
+import project.repository.TravelRepository;
+
 public class TravelMain {
   public static void main(String[] args) throws Exception {
     String mode = null;
@@ -25,20 +28,26 @@ public class TravelMain {
       }
     }
 
-    TravelTransaction travel = null;
-    travel = new TravelTransaction();
+    TravelRepository travel;
+    travel = new TravelRepository();
+    assert mode != null;
     if (mode.equalsIgnoreCase("add")) {
       travel.add(price, from, to);
     } else if (mode.equalsIgnoreCase("delete")) {
       travel.delete(id);
+    } else if (mode.equalsIgnoreCase("updatePrice")) {
+      travel.updatePrice(id, price);
+    } else if (mode.equalsIgnoreCase("read")) {
+      travel.read(id);
     }
     travel.close();
   }
 
   private static void printUsageAndExit() {
     System.err.println(
-        "Travel:  -mode adde -price number -to city -from city \n or \n"
-            + "-mode delete -id id");
+        "Travel:  -mode add -price number -to city -from city \n or \n"
+            + "-mode delete/read -id id \n or \n"
+            + "-mode updatePrice -id id -price price");
     System.exit(1);
   }
 }
