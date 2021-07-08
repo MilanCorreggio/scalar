@@ -18,3 +18,7 @@ Example to add and delete flights
  To add: `../gradlew run --args="-mode add -price 1000 -to Osaka -from Tokyo"`
 
  To delete: `../gradlew run --args="-mode delete -id id"`
+
+ To read: `../gradlew run --args="-mode read -id id"`
+
+ To update: `../gradlew run --args="-mode updatePrice -id id -price 10000"`
